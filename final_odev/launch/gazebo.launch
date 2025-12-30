@@ -1,0 +1,21 @@
+<launch>
+  <arg name="world"
+       default="$(find final_odev)/world/home.world"/>
+
+  <!-- Gazebo + custom world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world)"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+  </include>
+
+  <!-- Robot -->
+  <param name="robot_description"
+         command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_waffle_pi.urdf.xacro"/>
+
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"
+        args="-urdf -param robot_description -model turtlebot3"
+        output="screen"/>
+</launch>
+

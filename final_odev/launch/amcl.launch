@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="map_server" type="map_server" name="map_server"
+        args="$(find final_odev)/maps/map.yaml"/>
+
+  <include file="$(find turtlebot3_navigation)/launch/amcl.launch"/>
+</launch>
+

@@ -1,0 +1,32 @@
+<sdf version="1.4">
+  <model name="qr_livingroom">
+    <static>true</static>
+
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>0.4 0.4</size>
+          </plane>
+        </geometry>
+
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <uri>file://media/materials/textures</uri>
+            <name>Gazebo/White</name>
+          </script>
+
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+
+          <texture>
+            <uri>model://qr_livingroom/materials/textures/qr_livingroom.png</uri>
+          </texture>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
+

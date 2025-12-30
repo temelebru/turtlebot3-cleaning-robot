@@ -1,0 +1,35 @@
+rooms:
+  - CORRIDOR
+  - LIVINGROOM
+  - BEDROOM
+  - KITCHEN
+
+LIVINGROOM:
+  entry_goal:
+    x: 2.18
+    y: 0.56
+    yaw: 0.0
+  qr_expected: "ROOM=LIVINGROOM"
+
+CORRIDOR:
+  entry_goal:
+    x: -0.05
+    y: 0.54
+    yaw: 0.0
+  qr_expected: "ROOM=CORRIDOR"
+
+BEDROOM:
+  entry_goal:
+    x: 6.26
+    y: 0.48
+    yaw: 0.0
+  qr_expected: "ROOM=BEDROOM"
+
+KITCHEN:
+  entry_goal:
+    x: -4.81
+    y: 3.11
+    yaw: 0.0
+  qr_expected: "ROOM=KITCHEN"
+
+
